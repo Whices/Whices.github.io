@@ -206,7 +206,8 @@ header div ul button:hover {
 		height: 95px;
 		width: 100%;
 	}
-	header nav{
+
+	header nav {
 		top: -17px;
 	}
 }
@@ -724,8 +725,6 @@ mark {
 	flex-wrap: wrap;
 }
 
-
-
 .dpChine {
 	width: 48px;
 	height: 48px;
@@ -737,7 +736,6 @@ mark {
 	height: 900px;
 	width: 100%;
 }
-
 
 .mainS section:nth-child(odd) article {
 	bottom: 0;
@@ -753,46 +751,29 @@ mark {
 	margin-top: 330px;
 }
 
-.gr-btn-1,
-.gr-btn-2,
-.gr-btn-3 {
-	display: none;
-}
-
-
-.btn-1 {
-	width: 100px;
-	height: 60px;
-	background-color: #FFB200;
-	border: none;
-	border-radius: 5px;
-	box-shadow: black 2px 2px 5px;
-	font-size: 16px;
-	color: white;
-	text-shadow: black 1px 1px 2px;
-}
-
-.btn-2 {
-	width: 100px;
-	height: 60px;
-	background-color: #C26555;
-	border: none;
-	border-radius: 5px;
-	box-shadow: black 2px 2px 5px;
-	font-size: 16px;
-	color: white;
-	text-shadow: black 1px 1px 2px;
-}
-
+.btn-1,
+.btn-2,
 .btn-3 {
 	width: 100px;
 	height: 60px;
-	background-color: #C1FFC1;
 	border: none;
 	border-radius: 5px;
 	box-shadow: black 2px 2px 5px;
-	text-decoration: none;
 	font-size: 16px;
+	color: white;
+	text-shadow: black 1px 1px 2px;
+}
+
+.btn-1 {
+	background-color: #FFB200;
+}
+
+.btn-2 {
+	background-color: #C26555;
+}
+
+.btn-3 {
+	background-color: #C1FFC1;
 	color: black;
 	text-shadow: white 1px 1px 2px;
 }
@@ -804,63 +785,76 @@ mark {
 	color: inherit;
 }
 
-#anim1:hover {
-	& .gr-btn-1 {
-		display: flex;
-		gap: 10px;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		width: 90%;
+/*###################################################
+#                  Animation PC                     #
+###################################################*/
 
+@media (min-width: 1100px) {
+
+	.gr-btn-1,
+	.gr-btn-2,
+	.gr-btn-3 {
+		display: none;
 	}
 
-	transition: all ease-in .25s;
-	height: 300px;
-}
-
-.btn-1:hover {
-	cursor: pointer;
-	background-color: #e29e00;
-}
-
-.btn-2:hover {
-	cursor: pointer;
-	background-color: #a9443e;
-}
-
-.btn-3:hover {
-	cursor: pointer;
-	background-color: #a8e6a8;
-}
-
-#anim2:hover {
-	& .gr-btn-2 {
-		display: flex;
-		gap: 10px;
-		justify-content: center;
-		align-items: center;
-		width: 90%;
-		flex-wrap: wrap;
-
+	.btn-1:hover {
+		cursor: pointer;
+		background-color: #e29e00;
 	}
 
-	transition: all ease-in .25s;
-	height: 300px;
-}
+	.btn-2:hover {
+		cursor: pointer;
+		background-color: #a9443e;
+	}
 
-#anim3:hover {
-	& .gr-btn-3 {
+	.btn-3:hover {
+		cursor: pointer;
+		background-color: #a8e6a8;
+	}
+
+	#anim3:hover {
+		transition: all ease-in 0.25s;
+		height: 300px;
+	}
+
+	#anim2:hover {
+		transition: all ease-in 0.25s;
+		height: 300px;
+	}
+
+	#anim1:hover {
+		transition: all ease-in 0.25s;
+		height: 300px;
+	}
+
+	#anim1:hover .gr-btn-1 {
 		display: flex;
 		gap: 10px;
 		justify-content: center;
-		align-items: center;
+		align-content: center;
 		width: 90%;
 		flex-wrap: wrap;
 	}
 
-	transition: all ease-in .25s;
-	height: 300px;
+	#anim2:hover .gr-btn-2 {
+		display: flex;
+		gap: 10px;
+		justify-content: center;
+		align-content: center;
+		width: 90%;
+		flex-wrap: wrap;
+	}
+
+
+	#anim3:hover .gr-btn-3 {
+		display: flex;
+		gap: 10px;
+		justify-content: center;
+		align-content: center;
+		width: 90%;
+		flex-wrap: wrap;
+	}
+
 }
 
 
@@ -873,7 +867,9 @@ mark {
 	height: 100px;
 	font-size: 20px;
 }
-
+/*###################################################
+#                     carte                        #
+###################################################*/
 
 .mainS section:nth-child(3) {
 	height: 300px;
@@ -912,6 +908,9 @@ mark {
 	text-align: center;
 	margin-top: -5px
 }
+/*###################################################
+#                     Chine grid                    #
+###################################################*/
 
 .mainS section:nth-child(5) article {
 	margin-top: -100px;
@@ -928,11 +927,7 @@ mark {
 	align-items: center;
 }
 
-.infoC {
-	font-size: 50px;
-	text-align: center;
-	margin-top: -5px
-}
+
 
 .mainS section:nth-child(6) {
 	display: flex;
@@ -954,7 +949,11 @@ mark {
 	margin: 0 auto;
 	max-width: 1400px;
 }
-
+.infoC {
+	font-size: 50px;
+	text-align: center;
+	margin-top: -5px
+}
 .chine-grid p {
 	font-size: 30px;
 }
@@ -994,9 +993,8 @@ mark {
 	padding: 15px;
 	border-radius: 12px;
 }
-@media screen and (max-width: 750px) {
 
-	/* ---------- MAIN STRUCTURE ---------- */
+@media screen and (max-width: 750px) {
 
 	.mainS {
 		font-size: small;
@@ -1031,8 +1029,6 @@ mark {
 		display: none;
 	}
 
-	/* ---------- BUTTON GROUPS ---------- */
-
 	.gr-btn-1,
 	.gr-btn-2,
 	.gr-btn-3 {
@@ -1040,8 +1036,6 @@ mark {
 		gap: 5px;
 		justify-content: center;
 	}
-
-	/* ---------- BUTTONS ---------- */
 
 	.btn-1,
 	.btn-2,
@@ -1095,7 +1089,7 @@ mark {
 		background-color: #a8e6a8;
 	}
 
-    /*Animations enlever pour la version tel*/
+	/*Animations enlever pour la version tel*/
 	#anim1,
 	#anim2,
 	#anim3 {
@@ -1150,7 +1144,9 @@ mark {
 		width: 50px;
 		height: 50px;
 	}
+
 	/* Modif de la grid Chine pour la v tel */
+
 	.chine-grid {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
@@ -1188,12 +1184,13 @@ mark {
 	}
 
 	.chine-grid p {
-		font-size: 22px;
+		font-size: 23px;
 	}
 }
+
 @media (min-width: 1400px) {
 	.chine-grid p {
-		font-size: 30px;
+		font-size: 28px;
 	}
 
 	.money img {
