@@ -191,7 +191,7 @@ header div ul button:hover {
 	color: black;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 750px) {
 	header div {
 		display: none;
 	}
@@ -205,6 +205,9 @@ header div ul button:hover {
 	header {
 		height: 95px;
 		width: 100%;
+	}
+	header nav{
+		top: -17px;
 	}
 }
 
@@ -684,12 +687,14 @@ mark {
 	background-color: rgba(0, 0, 0, 0);
 }
 
-.mainS section #anim1 {
+.mainS section #anim1,
+.mainS section #anim2,
+.mainS section #anim3 {
 	border-radius: 15px 15px 0px 0;
 	margin-bottom: 15px;
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 178, 178, 0.363);
 	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 30px rgba(255, 0, 0, 0.1);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 	border: 1px solid rgba(255, 255, 255, 0.3);
@@ -719,26 +724,6 @@ mark {
 	flex-wrap: wrap;
 }
 
-.mainS section #anim2 {
-	margin-bottom: 15px;
-	background: rgba(255, 255, 255, 0.2);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.mainS section #anim3 {
-	border-radius: 0 0 15px 15px;
-	margin-bottom: 15px;
-	background: rgba(255, 255, 255, 0.2);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-}
 
 
 .dpChine {
@@ -955,24 +940,22 @@ mark {
 	align-items: center;
 }
 
-.china-grid {
+.chine-grid {
 	display: grid;
 	color: black;
 	grid-template-columns: 520px 390px 390px;
 	grid-template-rows: 300px 290px;
 	grid-template-areas:
-		"langue leader info"
+		"langue xping info"
 		"langue money  money";
-
 	gap: 20px;
 	padding: 20px;
 	box-sizing: border-box;
-
 	margin: 0 auto;
-	/* centrage desktop */
+	max-width: 1400px;
 }
 
-.china-grid p {
+.chine-grid p {
 	font-size: 30px;
 }
 
@@ -985,13 +968,13 @@ mark {
 	grid-area: langue;
 }
 
-.leader {
-	grid-area: leader;
+.xping {
+	grid-area: xping;
 	display: flex;
 	justify-content: center;
 }
 
-.leader img {
+.xping img {
 	max-width: 100%;
 	border-radius: 8px;
 }
@@ -1011,59 +994,81 @@ mark {
 	padding: 15px;
 	border-radius: 12px;
 }
+@media screen and (max-width: 750px) {
 
-@media screen and (max-width: 480px) {
+	/* ---------- MAIN STRUCTURE ---------- */
+
+	.mainS {
+		font-size: small;
+	}
+
 	.mainS section article {
 		width: 90%;
 		height: auto;
 	}
-	.mainS{
-		font-size: small;
-	}
+
 	.mainS section:nth-child(odd) article {
+		position: static;
 		height: auto;
-		margin-top: 150px;
+		margin-top: 20px;
+		padding: 15px;
 	}
+
+	.mainS section:nth-child(2) article {
+		margin-top: 15px;
+	}
+
+	.mainS section:nth-child(4) article {
+		margin-top: 0;
+	}
+
+	.mainS section:nth-child(1),
+	.mainS section:nth-child(5) {
+		height: auto;
+	}
+
+	.mainS section:nth-child(odd) figure {
+		display: none;
+	}
+
+	/* ---------- BUTTON GROUPS ---------- */
+
 	.gr-btn-1,
 	.gr-btn-2,
 	.gr-btn-3 {
 		display: none;
+		gap: 5px;
+		justify-content: center;
 	}
 
+	/* ---------- BUTTONS ---------- */
 
-	.btn-1 {
-		width: 100px;
-		height: 60px;
-		background-color: #FFB200;
+	.btn-1,
+	.btn-2,
+	.btn-3 {
+		width: 40%;
+		max-width: 260px;
+		height: 50px;
+		font-size: 14px;
 		border: none;
 		border-radius: 5px;
 		box-shadow: black 2px 2px 5px;
-		font-size: 16px;
+	}
+
+	.btn-1 {
+		background-color: #FFB200;
 		color: white;
 		text-shadow: black 1px 1px 2px;
 	}
 
 	.btn-2 {
-		width: 100px;
-		height: 60px;
 		background-color: #C26555;
-		border: none;
-		border-radius: 5px;
-		box-shadow: black 2px 2px 5px;
-		font-size: 16px;
 		color: white;
 		text-shadow: black 1px 1px 2px;
 	}
 
 	.btn-3 {
-		width: 100px;
-		height: 60px;
 		background-color: #C1FFC1;
-		border: none;
-		border-radius: 5px;
-		box-shadow: black 2px 2px 5px;
-		text-decoration: none;
-		font-size: 16px;
 		color: black;
 		text-shadow: white 1px 1px 2px;
 	}
@@ -1073,21 +1078,6 @@ mark {
 	.btn-3 a {
 		text-decoration: none;
 		color: inherit;
-	}
-
-	#anim1:hover {
-		& .gr-btn-1 {
-			display: flex;
-			gap: 10px;
-			justify-content: center;
-			align-items: center;
-			flex-wrap: wrap;
-			width: 90%;
-
-		}
-
-		transition: all ease-in .25s;
-		height: 300px;
 	}
 
 	.btn-1:hover {
@@ -1105,48 +1095,20 @@ mark {
 		background-color: #a8e6a8;
 	}
 
-	#anim2:hover {
-		& .gr-btn-2 {
-			display: flex;
-			gap: 10px;
-			justify-content: center;
-			align-items: center;
-			width: 90%;
-			flex-wrap: wrap;
-
-		}
-
-		transition: all ease-in .25s;
-		height: 300px;
+    /*Animations enlever pour la version tel*/
+	#anim1,
+	#anim2,
+	#anim3 {
+		height: auto;
+		align-items: center;
 	}
 
+	#anim1:hover,
+	#anim2:hover,
 	#anim3:hover {
-		& .gr-btn-3 {
-			display: flex;
-			gap: 10px;
-			justify-content: center;
-			align-items: center;
-			width: 90%;
-			flex-wrap: wrap;
-		}
-
-		transition: all ease-in .25s;
-		height: 300px;
-	}
-	.gr-moove h3{
-		font-size: medium;
-	}
-	.gr-moove
-	.gr-moove div figure	{
-		width: 50px;
-		height: 50px;
+		height: auto;
 	}
 
-}
-
-@media screen and (max-width: 428px) {
-
-	/* Images */
 	#anim1 img,
 	#anim2 img,
 	#anim3 img {
@@ -1163,7 +1125,6 @@ mark {
 		border-radius: 0 0 15px 15px;
 	}
 
-	/* Containers */
 	#anim1 div:nth-child(1),
 	#anim2 div:nth-child(1),
 	#anim3 div:nth-child(1) {
@@ -1171,28 +1132,76 @@ mark {
 		align-items: center;
 	}
 
-	/* Sections */
-	.mainS section:nth-child(1) {
-		height: auto;
+	#anim1 div:nth-child(2),
+	#anim2 div:nth-child(2),
+	#anim3 div:nth-child(2) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-around;
 	}
 
-	.mainS section:nth-child(odd) article {
-		position: static;
-		height: auto;
-		margin-top: 20px;
+
+	.gr-moove h3 {
+		font-size: medium;
+	}
+
+	.gr-moove .gr-moove div figure {
+		width: 50px;
+		height: 50px;
+	}
+	/* Modif de la grid Chine pour la v tel */
+	.chine-grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"langue"
+			"xping"
+			"info"
+			"money";
 		padding: 15px;
 	}
 
-	/* Boutons */
-	.btn-1,
-	.btn-2,
-	.btn-3 {
-		width: 40%;
-		max-width: 260px;
-		height: 50px;
-		font-size: 14px;
+	.chine-grid p {
+		font-size: 18px;
+	}
+
+	.xping img {
+		width: 100%;
+		height: auto;
+	}
+
+	.money img {
+		width: 140px;
+		height: auto;
+		margin-top: 10px;
 	}
 }
+
+@media (max-width: 1400px) and (min-width: 429px) {
+	.chine-grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"langue langue"
+			"xping info"
+			"money money";
+	}
+
+	.chine-grid p {
+		font-size: 22px;
+	}
+}
+@media (min-width: 1400px) {
+	.chine-grid p {
+		font-size: 30px;
+	}
+
+	.money img {
+		width: 200px;
+		height: 100px;
+	}
+}
+
 
 
 /*###################################################
