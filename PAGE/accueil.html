@@ -2,28 +2,212 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="color-scheme" content="only">
+   <link rel="stylesheet" href="style.css" />
+   <title>Document</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <span></span>
-            <span></span>
-            <span></span>
-        </nav>
-        <article>
-            <div id="btn_header"></div>
-            <div id="btn_header"></div>
-            <div id="btn_header"></div>
-        </article>
+   <header>
 
-        <figure>
-            <img src="../IMAGES/img_acc/logo_chine.png">
-        </figure>
-    </header>
+      <figcaption>
+         <figure>
+            <img src="../IMAGES/img_acc/logo_chine.png" height="95px" width="95px">
+         </figure>
+      </figcaption>
+
+      <div>
+         <ul>
+            <button class="menu-button" type="button"><a href="#C_CU"> CULTURE</a></button>
+            <button class="menu-button" type="button"><a href="#C_CA"> CARTE</a></button>
+            <button class="menu-button" type="button"><a href="#C_IF"> INFO</a></button>
+         </ul>
+      </div>
+
+      <input type="checkbox" id="menu-toggle">
+
+      <!-- Bouton burger -->
+      <label for="menu-toggle">
+         <span></span>
+         <span></span>
+         <span></span>
+      </label>
+
+      <!-- Menu -->
+      <nav>
+         <a href="#">Mention legal</a>
+         <a href="#contact">Contact</a>
+      </nav>
+
+   </header>
+
+   <main class="mainS">
+
+      <section>
+         <h2 class="titre_main">BIENVENUE EN CHINE</h2>
+
+         <article>
+            <h2 id="C_CU">La CHINE et ça culture</h2>
+            <figure>
+               <img src="../IMAGES/img_acc/dpChine.png" alt="Image illustrative de la Chine" class="dpChine">
+            </figure>
+         </article>
+      </section>
+
+      <section class="gr-moove">
+
+         <article id="anim1">
+            <div>
+               <figure>
+                  <img src="../IMAGES/img_acc/mc.jpg">
+               </figure>
+               <h3>Les lieux de chine</h3>
+            </div>
+            <div class="gr-btn-1">
+               <button class="btn-1"><a href="lieux.html">Cité interdite</a></button>
+               <button class="btn-1"><a href="#">Muraille de Chine</a></button>
+               <button class="btn-1"><a href="#">Nouveau palais d'été</a></button>
+               <button class="btn-1"><a href="#">Huangshan</a></button>
+               <button class="btn-1"><a href="#">Parc national de Zhangjiajie</a></button>
+               <button class="btn-1"><a href="#">Parc national de Lu Shan</a></button>
+               <button class="btn-1"><a href="#">Grottes de Mogao</a></button>
+               <button class="btn-1"><a href="#">Hua Shan</a></button>
+               <button class="btn-1"><a href="#">Rizières en terrasses de Longji</a></button>
+               <button class="btn-1"><a href="#">Vieille ville de Luoyang</a></button>
+            </div>
+         </article>
+         <article id="anim2">
+            <div>
+               <figure>
+                  <img src="../IMAGES/img_acc/mc.jpg">
+               </figure>
+               <h3>Les oeuvres de chine</h3>
+            </div>
+            <div class="gr-btn-2">
+               <button class="btn-2"><a href="oeuvre.html">L'art de la guerre</a></button>
+               <button class="btn-2"><a href="#">Le bouddha de leshan</a></button>
+               <button class="btn-2"><a href="#">Guanyin</a></button>
+               <button class="btn-2"><a href="#">La grande statue de confucius</a></button>
+               <button class="btn-2"><a href="#">Habitation de Fuchun</a></button>
+               <button class="btn-2"><a href="#">Cent chevaux</a></button>
+               <button class="btn-2"><a href="#">Mille Li rivières et montagnes</a></button>
+               <button class="btn-2"><a href="#">Cinq boeufs</a></button>
+               <button class="btn-2"><a href="#">Le pavillon rouge</a></button>
+               <button class="btn-2"><a href="#">L'armée de terre cuite</a></button>
+            </div>
+         </article>
+         <article id="anim3">
+            <div>
+               <figure>
+                  <img src="../IMAGES/img_acc/mc.jpg">
+               </figure>
+               <h3>Les personnage historique</h3>
+            </div>
+            <div class="gr-btn-3">
+               <button class="btn-3"><a href="Personnage.html">Lü Bu </a></button>
+               <button class="btn-3"><a href="#">Jackie Chan</a></button>
+               <button class="btn-3"><a href="#">Sun Tzu</a></button>
+               <button class="btn-3"><a href="#">Fu hao</a></button>
+            </div>
+         </article>
+      </section>
+
+      <section>
+         <article>
+            <h2 class="carteC" id="C_CA">Carte de la chine</h2>
+            <figure>
+               <img src="../IMAGES/img_acc/dpChine.png" alt="Image illustrative de la Chine" class="dpChine">
+            </figure>
+
+         </article>
+      </section>
+
+      <section>
+         <article>
+            <iframe
+               src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d27139139.858262792!2d82.76397045816356!3d33.86689872828484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChine!3m2!1d35.86166!2d104.195397!4m5!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChine!3m2!1d35.86166!2d104.195397!5e0!3m2!1sfr!2sfr!4v1765716055884!5m2!1sfr!2sfr"
+               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+               referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </article>
+      </section>
+
+      <section>
+         <article>
+            <h2 class="infoC" id="C_IF">Information général sur la Chine</h2>
+            <figure>
+               <img src="../IMAGES/img_acc/dpChine.png" alt="Image illustrative de la Chine" class="dpChine">
+            </figure>
+
+         </article>
+      </section>
+
+      <section>
+         <div class="china-grid">
+            <div class="langue">
+               <h2>Langue parlée en Chine</h2>
+               <p>
+                  Le chinois mandarin, appelé officiellement «putonghua» en chinois standard, est parlé par au moins 867
+                  millions de locuteurs dans la majorité des provinces du pays, notamment dans tout le Centre, ainsi que
+                  le Nord-Est
+               </p>
+            </div>
+
+            <div class="leader">
+               <img src="../IMAGES/img_acc/xi.jpg" alt="Xi Jinping">
+            </div>
+
+            <div class="info">
+               <p>
+                  Xi Jinping est le dirigeant actuelle de la république populaire de Chine depuis le 14 mars 2013 
+               </p>
+            </div>
+
+            <div class="money">
+               <p>La monnaie chinoise est le Yuan représenté par le "¥"</p>
+               <img src="../IMAGES/img_acc/yuan5.png" alt="Yuan">
+            </div>
+         </div>
+
+      </section>
+   </main>
+
+   <footer>
+      <section>
+         <div>
+            <div>Infos rapides — Chine</div>
+            <ul>
+               <li>Capitale : Pékin (Beijing)</li>
+               <li>Langue officielle : chinois mandarin</li>
+               <li>Population : ~1,4 milliard</li>
+               <li>Monnaie : yuan (CNY)</li>
+            </ul>
+         </div>
+
+         <div>
+            <div>Liens utiles</div>
+            <ul>
+               <li><a href="#">Guide voyage</a></li>
+               <li><a href="#">Culture &amp; traditions</a></li>
+               <li><a href="#">Cuisine</a></li>
+            </ul>
+         </div>
+
+         <article>
+            <h2>Contact</h2>
+            <ul>
+               <li>Email : <a href="mailto:mail@mail.com">mail@mail.com</a></li>
+               <li>Tel : +33 1 23 45 67 89</li>
+            </ul>
+         </article>
+      </section>
+
+      <div class="footer-bottom">
+         <small>© 2025 — Projet SAE105 — </small>
+      </div>
+   </footer>
 
 </body>
 
