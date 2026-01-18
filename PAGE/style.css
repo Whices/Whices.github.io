@@ -8,6 +8,12 @@
 	--Text1: #C26555;
 	--Text3: #FFF;
 }
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 
 h1 {
 	font-weight: bold;
@@ -692,6 +698,64 @@ mark {
 	color: #C26555;
 }
 
+
+@media screen and (max-width: 750px) {
+
+	.historique,
+	.imp {
+		grid-template-columns: 1fr;
+	}
+
+	.historique>*,
+	.imp>* {
+		grid-column: 1;
+		grid-row: auto;
+		width: 100%;
+	}
+
+	#pImp,
+	#historique,
+	#impacts {
+		width: 100%;
+		font-size: 32px;
+		padding: 8px;
+	}
+
+	.pImportants {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.pImportants img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.pImportants figure {
+		width: 80%;
+	}
+
+	.deux,
+	.trois,
+	.quatre,
+	.six,
+	.huit,
+	.bio {
+		font-size: 22px;
+		text-align: center;
+	}
+
+	.sept {
+        display: none;
+    }
+
+}
+
 /*###################################################
 #                     main                          #
 ###################################################*/
@@ -1315,4 +1379,88 @@ footer section div {
 footer section a {
 	color: white;
 	text-decoration: none;
+}
+
+@media screen and (max-width: 428px) {
+	footer section div{
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 450px) {
+
+	.articlepresentation,
+	.articlebiographie,
+	.histoirelubu,
+	.articleoeuvre1,
+	.articleoeuvre2,
+	.articleoeuvre3 {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center;
+	}
+
+	.articlepresentation *,
+	.articlebiographie *,
+	.histoirelubu *,
+	.articleoeuvre1 *,
+	.articleoeuvre2 *,
+	.articleoeuvre3 * {
+		grid-column: auto !important;
+		grid-row: auto !important;
+		margin: 5px 0 !important;
+	}
+
+	.h1perso {
+		width: 100%;
+		font-size: 32px;
+		padding: 10px;
+	}
+
+	main h2 {
+		font-size: 24px;
+		text-align: center;
+	}
+
+	p,
+	.parag,
+	summary,
+	figcaption {
+		font-size: 18px;
+		text-align: center;
+		padding: 10px;
+	}
+
+	p,
+	.parag,
+	.histoirelubu{
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	figure {
+		margin: 0;
+	}
+
+	.caption,
+	.caption2 {
+		width: 100%;
+		font-size: 14px;
+	}
+
+	details {
+		width: 100%;
+	}
 }
