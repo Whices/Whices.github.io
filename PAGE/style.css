@@ -293,6 +293,73 @@ main div div section div img {
 	animation: reduire 0.5s forwards;
 }
 
+
+@media screen and (max-width: 428px) {
+
+  
+  main {
+    padding: 10px 0;
+  }
+
+  main > div > div section > div,
+  main > div > div section article {
+    margin: 12px auto;
+    padding: 14px;
+    width: 92%;
+    border-radius: 20px;
+  }
+
+  
+  main > div > div h2 {
+    font-size: 24px;
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  main > div > div h3 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  
+  main > div > div p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  
+  main .ligne_d_information {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding-bottom: 8px;
+  }
+
+  main .ligne_d_information h3 {
+    width: auto;
+    font-weight: 600;
+  }
+
+  main section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  
+  main * {
+    max-width: 100%;
+
+  }
+    main div div article p {
+    font-size: 15px;
+    padding: 1em;
+    line-height: 1.6;
+  }
+}
+
+
 /*###################################################
 #				Main personnage						#
 ###################################################*/
